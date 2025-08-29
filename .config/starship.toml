@@ -1,0 +1,32 @@
+# Single-line, minimal, Macchiato-inspired prompt
+format = """$directory$git_branch$git_status$cmd_duration$python$character"""
+
+[directory]
+style = "bold fg:#8AADF4"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "fg:#F5BDE6"
+
+[git_branch]
+symbol = " "
+style = "fg:#A6DA95"
+format = " [$symbol$branch]($style)"
+
+[git_status]
+style = "fg:#ED8796"
+format = '([$all_status]($style))'
+
+[character]
+success_symbol = "[❯](bold fg:#A6DA95)"
+error_symbol = "[❯](bold fg:#ED8796)"
+vicmd_symbol = "[❮](bold fg:#F5BDE6)"
+
+[cmd_duration]
+min_time = 500  # show if command takes more than 0.5s
+format = " [ $duration](fg:#EED49F)"
+
+[python]
+# symbol = " "  # You can change this to something else if you prefer
+style = "fg:#F5BDE6"
+format = " [$symbol$virtualenv]($style)"

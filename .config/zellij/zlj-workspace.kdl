@@ -1,0 +1,351 @@
+layout {
+    cwd "/Users/nialphil"
+    tab name="workspace" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="hx" name="helix" cwd="Workspace/Repos/bot_platform-fe" size="85%" {
+            args "."
+            start_suspended true
+        }
+        pane command="lazygit" name="lazygit" cwd="Workspace/Repos/bot_platform-fe" size="15%" {
+            start_suspended true
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+        floating_panes {
+            pane command="yazi" name="files" {
+                start_suspended true
+                height 42
+                width 159
+                x 25
+                y 6
+            }
+            pane command="node" cwd="Workspace/Repos/bot_platform-fe" {
+                start_suspended true
+                height 42
+                width 159
+                x 27
+                y 69
+                args "/opt/homebrew/Cellar/yarn/1.22.22/libexec/bin/yarn.js" "start"
+            }
+        }
+    }
+    tab name="misc" focus=true hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="btop" name="Notepad" cwd="Workspace" size="60%" {
+            start_suspended true
+        }
+        pane size="40%" split_direction="vertical" {
+            pane command="glow" cwd="Workspace/Notepad" size="20%" {
+                start_suspended true
+            }
+            pane command="zellij" name="Testing" focus=true size="80%" {
+                args "action" "dump-layout"
+                start_suspended true
+            }
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+        floating_panes {
+            pane command="scooter" name="Search" cwd="/Users/nialphil" {
+                start_suspended true
+                height 30
+                width 99
+                x 83
+                y 14
+            }
+        }
+    }
+    new_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane cwd="/Users/nialphil"
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    swap_tiled_layout name="vertical" {
+        tab max_panes=5 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane split_direction="vertical" {
+                    pane
+                    pane {
+                        children
+                    }
+                }
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+        tab max_panes=8 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane split_direction="vertical" {
+                    pane {
+                        children
+                    }
+                    pane {
+                        pane
+                        pane
+                        pane
+                        pane
+                    }
+                }
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+        tab max_panes=12 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane split_direction="vertical" {
+                    pane {
+                        children
+                    }
+                    pane {
+                        pane
+                        pane
+                        pane
+                        pane
+                    }
+                    pane {
+                        pane
+                        pane
+                        pane
+                        pane
+                    }
+                }
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+    }
+    swap_tiled_layout name="horizontal" {
+        tab max_panes=4 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane
+                pane
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+        tab max_panes=8 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane {
+                    pane split_direction="vertical" {
+                        children
+                    }
+                    pane split_direction="vertical" {
+                        pane
+                        pane
+                        pane
+                        pane
+                    }
+                }
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+        tab max_panes=12 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane {
+                    pane split_direction="vertical" {
+                        children
+                    }
+                    pane split_direction="vertical" {
+                        pane
+                        pane
+                        pane
+                        pane
+                    }
+                    pane split_direction="vertical" {
+                        pane
+                        pane
+                        pane
+                        pane
+                    }
+                }
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+    }
+    swap_tiled_layout name="stacked" {
+        tab min_panes=5 {
+            pane size=1 borderless=true {
+                plugin location="tab-bar"
+            }
+            pane {
+                pane split_direction="vertical" {
+                    pane
+                    pane stacked=true {
+                        children
+                    }
+                }
+            }
+            pane size=1 borderless=true {
+                plugin location="status-bar"
+            }
+        }
+    }
+    swap_floating_layout name="staggered" {
+        floating_panes {
+        }
+    }
+    swap_floating_layout name="enlarged" {
+        floating_panes max_panes=10 {
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 1
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 2
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 3
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 4
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 5
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 6
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 7
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 8
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x "5%"
+                y 9
+            }
+            pane cwd="/Users/nialphil" {
+                height "90%"
+                width "90%"
+                x 10
+                y 10
+            }
+        }
+    }
+    swap_floating_layout name="spread" {
+        floating_panes max_panes=1 {
+            pane cwd="/Users/nialphil" {
+                x "50%"
+                y "50%"
+            }
+        }
+        floating_panes max_panes=2 {
+            pane cwd="/Users/nialphil" {
+                width "45%"
+                x "1%"
+                y "25%"
+            }
+            pane cwd="/Users/nialphil" {
+                width "45%"
+                x "50%"
+                y "25%"
+            }
+        }
+        floating_panes max_panes=3 {
+            pane cwd="/Users/nialphil" {
+                height "45%"
+                width "45%"
+                y "55%"
+            }
+            pane cwd="/Users/nialphil" {
+                width "45%"
+                x "1%"
+                y "1%"
+            }
+            pane cwd="/Users/nialphil" {
+                width "45%"
+                x "50%"
+                y "1%"
+            }
+        }
+        floating_panes max_panes=4 {
+            pane cwd="/Users/nialphil" {
+                height "45%"
+                width "45%"
+                x "1%"
+                y "55%"
+            }
+            pane cwd="/Users/nialphil" {
+                height "45%"
+                width "45%"
+                x "50%"
+                y "55%"
+            }
+            pane cwd="/Users/nialphil" {
+                height "45%"
+                width "45%"
+                x "1%"
+                y "1%"
+            }
+            pane cwd="/Users/nialphil" {
+                height "45%"
+                width "45%"
+                x "50%"
+                y "1%"
+            }
+        }
+    }
+}
+

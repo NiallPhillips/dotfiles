@@ -1,0 +1,33 @@
+# ~/.ticker.yaml
+show-summary: true
+show-tags: true
+show-fundamentals: true
+show-separator: true
+show-holdings: true
+interval: 5
+currency: USD
+currency-summary-only: false
+watchlist:
+  - MSFT
+  - GOOG
+  - BTC-USD # Bitcoin price via Yahoo
+  - SOL.X # Solana price via Coinbase
+  - BIT-30MAY25-CDE.CB # Bitcoin futures contract price via Coinbase
+lots:
+  - symbol: "CSCO"
+    quantity: 35.0
+  - symbol: "AMD"
+    quantity: 50.0
+    unit_cost: 115.00
+  - symbol: "FUBO"
+    quantity: 4000.0
+    unit_cost: 1.41
+# groups:
+#   - name: crypto
+#     watchlist:
+#       - SHIB-USD
+#       - VGX-USD
+#     holdings:
+#       - symbol: SOL1-USD
+#         quantity: 17
+#         unit_cost: 159.10

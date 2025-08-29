@@ -1,0 +1,25 @@
+# My Aliases
+alias ls='eza'
+alias ll='eza --long --header --icons --git'
+alias la='ll -a'
+alias reload='source ~/.zshrc'
+alias edzsh='hx ~/.zshrc'
+alias python='python3'
+alias lg="lazygit"
+alias calc="kalker"
+alias zlj="zellij -l ~/.config/zellij/zlj-workspace.kdl"
+alias usesdk='source "$HOME/.sdkman/bin/sdkman-init.sh"'
+alias tkr="ticker --config ~/.config/.ticker.yaml"
+alias updatePreview="cd ~/Workspace/Repos/bot_platform-fe && yarn run voice-preview-sdk:build && cp -r ~/Workspace/Repos/bot_platform-fe/voice-preview-sdk/dist/. ~/Workspace/Repos/botbuilder/preview/code/project/public/voice-sdk && cd -"
+zl() {
+  if [ -d "$1" ]; then
+    cd "$1" && ll
+  else
+    echo "Directory $1 does not exist."
+  fi
+}
+alias xLaunch="cd ~/Workspace/Repos/bot_platform-fe/xLaunch && sh xLaunch.sh && cd -"
+alias aichat="ollama run qwen3:8b --think=false"
+fzrg() {
+  hx $(rg --files-with-matches $1 | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')
+}
